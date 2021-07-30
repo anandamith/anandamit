@@ -8,3 +8,5 @@ var answer = isUserValid(true)?"you may enter" :"Access Denied"
 
 var automatedAnswer =
 "your account # is "+(isUserValid(false)?"1234":"not avilable")
+//to print we can use
+console.log()
