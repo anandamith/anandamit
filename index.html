@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+
+  <style>
+    body {
+      margin: 0px;
+    }
+
+    .main {
+      height: 50px;
+    }
+
+    .navbar {
+      height: 50px;
+      background-color: #2874f0;
+
+      display: flex;
+      padding-left: 300px;
+      padding-right: 300px;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .flipkart_logo {
+      width: 100px;
+    }
+
+    .search_logo {
+      width: 33px;
+    }
+    input {
+      width: 500px;
+      height: 25px;
+
+      border: solid 1px white;
+    }
+    .navbar_rhs {
+      display: flex;
+      gap: 20px;
+
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      padding-left: 200px;
+    }
+
+    .search_btn {
+      background-color: white;
+      border: solid 1px white;
+      background-color: navy;
+      border-radius: 0 2px 2px;
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+    }
+
+    .products{
+
+        display: grid;
+        grid-template-columns: 400px 400px 400px 400px;
+
+        justify-content: end;
+    }
+
+    #product-img{
+
+        width:200px
+
+    }
+
+    h1{
+
+        text-align: center;
+        margin-top: 80px;
+        margin-bottom: 80px;
+
+    }
+
+    #product-rating{
+
+        background-color:green;
+        color: white;
+        border: solid 1px green;
+    }
+
+  </style>
+
+  <body>
+    <div class="main">
+      <div class="navbar">
+        <div class="logo">
+          <img
+            class="flipkart_logo"
+            src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png"
+            alt=""
+          />
+        </div>
+
+        <div class="search">
+          <input type="text" placeholder="Search for Products, Brands and more" />
+
+          <button  class="search_btn"><img class="search_logo" src="file:///C:/Users/anand/OneDrive/Desktop/online%20store/search.svg" alt="" /></button>
+        </div>
+
+        <div class="navbar_rhs">
+          <div>Profile</div>
+          <div>More</div>
+          <div>Cart</div>
+        </div>
+        </div>
+
+
+        <h1>ShopProducts</h1>
+
+        <div class="products">
+
+     
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  var products = [
+    {
+      name: "realme C20 (Cool Blue, 32 GB) (2 GB RAM)",
+      img: "https://rukminim1.flixcart.com/image/832/832/kn7sdjk0/mobile/w/h/q/c20-rmx3063-realme-original-imagfxfzay72jqvh.jpeg?q=70",
+      price: "₹ 6999",
+      rating: "4.3",
+    },
+    {
+      name: "realme Narzo 30 (Racing Silver, 64 GB) (4 GB RAM)",
+      img: "https://rukminim1.flixcart.com/image/832/832/kq18n0w0/mobile/u/w/b/narzo-30-rmx2156-realme-original-imag45ymfpry9ecq.jpeg?q=70",
+      price: "₹ 12499",
+      rating: "4.3",
+    },
+    {
+      name: "OPPO Reno6 5G (Aurora, 128 GB) (8 GB RAM)",
+      img: "https://rukminim1.flixcart.com/image/832/832/kr2e3680/mobile/b/q/v/reno6-5g-cph2251-oppo-original-imag4xp73qsqrtnt.jpeg?q=70",
+      price: "₹ 29990",
+      rating: "4.3",
+    },
+    {
+      name: "SAMSUNG Galaxy F41 (Fusion Blue, 128 GB) (6 GB RAM)",
+      img: "https://rukminim1.flixcart.com/image/832/832/kfzq8i80/mobile/y/j/f/samsung-galaxy-f41-sm-f415fzbdins-original-imafwbnpdafmeuj6.jpeg?q=70",
+      price: "₹ 19990",
+      rating: "4.3",
+    },
+    {
+      name: "OPPO Reno6 5G (Aurora, 128 GB) (8 GB RAM)",
+      img: "https://rukminim1.flixcart.com/image/832/832/kg8avm80/mobile/y/7/n/apple-iphone-12-dummyapplefsn-original-imafwg8dqq7z8cgh.jpeg?q=70",
+      price: "₹ 29990",
+      rating: "4.3",
+    },
+    {
+      name: "APPLE iPhone 12 (Blue, 128 GB)",
+      img: "https://rukminim1.flixcart.com/image/832/832/kr2e3680/mobile/b/q/v/reno6-5g-cph2251-oppo-original-imag4xp73qsqrtnt.jpeg?q=70",
+      price: "₹ 72990",
+      rating: "4.3",
+    },
+    {
+      name: "vivo Y51A (Crystal Symphony, 128 GB) (8 GB RAM)",
+      img: "https://rukminim1.flixcart.com/image/832/832/kk1h5e80/mobile/3/7/u/vivo-y51a-v2031-original-imafzh2ud9t3wsm7.jpeg?q=70",
+      price: "₹ 17990",
+      rating: "4.3"
+    },
+  ];
+
+  //Array
+
+
+  var products_div = document.querySelector('.products')
+
+  for (let i = 0; i < products.length; i++) {
+   
+    var div = document.createElement("div");
+
+    var img = document.createElement("img");
+
+    img.src = products[i].img
+
+    img.id = "product-img"
+
+
+    var title = document.createElement('p')
+
+    title.innerText = products[i].name
+
+
+    var rating = document.createElement('button')
+
+    rating.innerText=products[i].rating
+
+    rating.id = "product-rating"
+
+
+    var price = document.createElement('p')
+
+    price.innerText = products[i].price
+
+
+    div.onclick = function(){
+
+        showProduct(products[i])
+
+    }
+
+
+    div.append(img, title, rating, price)
+
+    products_div.append(div)
+
+
+
+
+  }
+
+
+
+  function showProduct(product){
+  
+  
+    console.log('product:', product)
+
+
+    localStorage.setItem("clicked_product", JSON.stringify(product))
+
+    window.location.href='product.html'
+
+
+  }
+
+
+</script>
