@@ -14,5 +14,8 @@ user.favouritemovie = "Thor";
 
 // we can change booleans also
 user.BOY=false;
+//to print
+console.log(user)
+
 
 //object good at  containg something user information
