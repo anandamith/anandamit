@@ -19,3 +19,13 @@ console.log(user)
 
 
 //object good at  containg something user information
+ var list=[
+ {
+ 	username:"abhi"
+ 	password:"9898"
+ },
+  {
+  	username:"java"
+  	password:"jijsh"
+  }
+ ];
