@@ -10,6 +10,8 @@ const newArray=array.forEach((num)=>{
 	double.push(num*2)
 
 })
+
+//to print we use console
 console.log(double);
 
 
